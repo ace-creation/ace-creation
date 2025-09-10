@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>株式会社エースクリエイション</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="wrapper">
+
+    <!-- ヘッダー -->
+<header class="site-header">
+  <div class="header-top">
+    <img src="img/ACE CREATION.png" alt="ACE CREATIONロゴ" class="logo-left">
+    <img src="img/telnumber.png" alt="お問い合わせ電話番号" class="logo-right">
+  </div>
+
+  <!-- ナビゲーション -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">トップ</a></li>
+      <li><a href="service.html">サービス案内</a></li>
+      <li><a href="Information.html">物件情報</a></li>
+      <li><a href="company.html">会社概要</a></li>
+      <li><a href="contact.html">お問い合わせ</a></li>
+    </ul>
+  </nav>
+</header>
+
+    <!-- スライダー -->
+    <section class="banner-slider">
+      <div class="slider-container">
+        <div class="arrow left" onclick="prevSlide()">←</div>
+        <img id="slider-image" src="img/6b1b229fa63ab4a7b6421408b3d6d1cc.png" alt="バナー画像">
+        <div class="arrow right" onclick="nextSlide()">→</div>
+      </div>
+    </section>
+
+    <!-- バナー配置 -->
+    <section class="banner-composite">
+  <div class="left-image">
+    <img src="img/TOPintro.png" alt="トップ紹介">
+  </div>
+  <div class="right-images">
+    <img src="img/hatosan_banner.png" alt="ハトさんマーク">
+    
+    <a href="https://web.archive.org/web/20230306203103/http://www.tou-seiren.jp/" target="_blank" rel="noopener noreferrer">
+      <img src="img/touseiren_banner.png" alt="東京都宅建政治連盟バナー" class="touseiren-banner">
+    </a>
+  </div>
+</section>
+
+    <!-- サービス紹介 -->
+    <section class="service-section">
+      <p>特殊不動産・住宅・マンション・土地の<br>
+      ご相談は株式会社エースクリエイションへ</p>
+    </section>
+
+    <!-- お知らせ -->
+    <section class="news">
+      <h2>お知らせ</h2>
+      <ul>
+        <li class="underline">2021.6.1 ホームページを更新しました</li>
+        <li class="underline">2016.11.6 ホームページを更新しました</li>
+        <li class="underline">2016.4.1 ホームページを更新しました</li>
+      </ul>
+    </section>
+
+    <!-- フッター -->
+    <footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <a href="#">プライバシーポリシー</a>
+    </div>
+    <div class="footer-center">
+      <p class="company-name">株式会社エースクリエイション</p>
+      <p>〒103-0007 東京都中央区日本橋浜町2-16-6</p>
+      <p>TEL: 03-5632-7556　FAX: 03-5632-7557</p>
+    </div>
+    <div class="footer-right">
+      <p>©2016 ACE CREATION Co.Ltd.</p>
+      <p>all rights reserved.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>ACE CREATION公式サイト</p>
+  </div>
+</footer>
+
+
+  </div>
+
+  <!-- スライダー用JavaScript -->
+  <script>
+    const images = [
+      "img/6b1b229fa63ab4a7b6421408b3d6d1cc.png",
+      "img/38d228f21b81754692018c16f81dd433.png",
+      "img/177d84e71f645ae5f1e5b501dc9a3690.png"
+    ];
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      const img = document.getElementById("slider-image");
+      img.src = images[index];
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % images.length;
+      showSlide(currentIndex);
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showSlide(currentIndex);
+    }
+  </script>
+</body>
+</html>
